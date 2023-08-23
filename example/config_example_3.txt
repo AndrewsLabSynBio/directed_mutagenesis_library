@@ -1,0 +1,27 @@
+# Configuration file for the directed protien mutagenesis library design script
+
+[parameters]
+# Basic parameters for the library design
+# See README file or script docstring (script input of -h or -help) for details on inputs and appropriate formats
+mutate_seq = ctcggcgcgctgagcctc
+up_const_seq = TCAGTCCATCCCACCTTGCCGGTCTCAcgaa
+down_const_seq = agcgAGAGACCCGACTCTATGGCTGTGTGGT
+avoid_seqs = GGTCTC
+CDS_fasta = DH10B_cds_from_genomic.fna
+CUT_table = 
+num_mutations = 3
+name_prefix = S129N-
+include_wt = n
+remove_repeats = n
+output_prefix = LasR_12_example
+
+
+[amino acids]
+# Format: Residue # = mutations at this residue
+# Mutations can any combination of a keyword (all, none, positive, negative, charged, polar, nonpolar, other) or amino acid letter code, separated by commas
+125 = all
+126 = all
+127 = all
+128 = all
+129 = none
+130 = all
